@@ -25,6 +25,13 @@ then comes the auto update: The github actions workflow in fullstack-repo-HW can
 
 # Test Case
 If we made a change on the front-end, the steps to update the full stack repo are:
+
 -push changes into front-end repo (individualy)
 -update the submodule reference to the latest commit in front-end-HW
 -commit and push changes to fullstack repo
+
+If we made a change on the back-end (working under the full stack tree):
+
+- commit and push into back-end(under full stack tree)
+- commit and push into full stack (after a change is detected in the submodules)
+- the individual repos will be automatically updated
