@@ -1,0 +1,6 @@
+[submodule "front-end-HW"]
+	path = front-end-HW
+	url = https://github.com/amirhilal044/front-end-HW.git
+[submodule "back-end-HW"]
+	path = back-end-HW
+	url = https://github.com/amirhilal044/back-end-HW.git
