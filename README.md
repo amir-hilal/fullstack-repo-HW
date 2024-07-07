@@ -21,3 +21,10 @@ Front-end-HW and Back-end-HW are individual repositories, each repository contai
 Full-stack-HW (unified repo) Contains config.yaml file and, front-end-HW and back-end-HW as submodules, config.yaml contains ServerIPAddress that can be accessed by client.py and server.py
 
 then comes the auto update: The github actions workflow in fullstack-repo-HW can ensure that any changes pushed to front-end-HW or back-end-HW are automatically reflected in fullstack-repo-HW.
+
+
+# Test Case
+If we made a change on the front-end, the steps to update the full stack repo are:
+-push changes into front-end repo (individualy)
+-update the submodule reference to the latest commit in front-end-HW
+-commit and push changes to fullstack repo
