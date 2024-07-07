@@ -15,3 +15,9 @@ Commit and Push changes
 Setup Auto-Update ofr Submodules using gitHub Actions
 
 Creating .github/workflows/update-submodules.yml file in fullstack-repo-HW to automatically update submodules on push events
+
+#How it Works
+Front-end-HW and Back-end-HW are individual repositories, each repository contains its own Python class ('cliend.py and server.py.), These classes read the configuration from a config.yaml file located two directories up, which will be the root of fullstack-repo-HW
+Full-stack-HW (unified repo) Contains config.yaml file and, front-end-HW and back-end-HW as submodules, config.yaml contains ServerIPAddress that can be accessed by client.py and server.py
+
+then comes the auto update: The github actions workflow in fullstack-repo-HW can ensure that any changes pushed to front-end-HW or back-end-HW are automatically reflected in fullstack-repo-HW.
