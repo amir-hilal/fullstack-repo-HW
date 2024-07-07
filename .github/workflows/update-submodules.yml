@@ -1,0 +1,25 @@
+name: Update Submodules
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  update-submodules:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+
+      - name: Update submodules
+        run: |
+          git submodule update --remote
+          git add .
+          git commit -m "Update submodules"
+          git push origin main
+
