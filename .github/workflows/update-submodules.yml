@@ -28,7 +28,7 @@ jobs:
           git config --global user.name "GitHub Actions"
           git submodule update --remote --merge
           git add .gitmodules
-          git add backend-repo frontend-repo
+          git add back-end-HW front-end-HW
           git status
           git commit -m "Update submodules" || echo "No changes to commit"
           git push origin main
