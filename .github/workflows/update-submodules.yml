@@ -19,7 +19,7 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Display git status
+      - name: Display git status before update
         run: git status
 
       - name: Update submodules
@@ -27,9 +27,13 @@ jobs:
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHub Actions"
           git submodule update --remote --merge
+          git add .gitmodules
+          git add backend-repo frontend-repo
           git status
-          git add .
           git commit -m "Update submodules" || echo "No changes to commit"
           git push origin main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Display git status after update
+        run: git status
